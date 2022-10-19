@@ -1,1 +1,26 @@
-<p>expense-record-item works!</p>
+<div class="header">
+    <button (click)="backToTodolist()" class="button-default">
+      <span>Back to ToDoList</span>
+    </button>
+  </div>
+
+  <form [formGroup]="form" class="body">
+    <div class="item-self">
+      <input formControlName="done" type="checkbox">
+      <input class="item-desc" formControlName="description">
+    </div>
+  </form>
+
+  <div class="footer">
+    <div class="delete-item">
+      <button *ngIf="toDoItem?.id && !isNewItem()" (click)="deleteItem()" class="button-red">Delete Item</button>
+    </div>
+    <div>
+      <span *ngIf="toDoItem.id && !isNewItem()">Created on {{toDoItem.createTime | date}}</span>
+    </div>
+    <div class="save-item">
+        <button (click)="saveItem()" class="button-blue">Save Item</button>
+    </div>
+  </div>
+
+
