@@ -29,4 +29,34 @@ public class ExpenseRecordController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteItemAsync([FromRoute] string id)
+    {
+        try
+        {
+            await _expenseRecordService.DeleteAsync(id);
+            return NoContent();
+        }
+        catch (Exception e)
+        {
+            return NotFound(e.Message);
+        }
+
+    }
+
+    [HttpGet("all")]
+    public async Task<IActionResult> GetAll()
+    {
+        try
+        {
+            var toDoItem = await _expenseRecordService.GetAll();
+            return new ObjectResult(toDoItem);
+        }
+        catch (ExpenseRecordException e)
+        {
+            return NotFound(e.Message);
+        }
+
+    }
 }
