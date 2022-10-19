@@ -10,26 +10,32 @@ AC1:
 GIVEN there is no expense data, 
 WHEN user visits page, 
 THEN the page does not show any expense data.
+没消费记录，什么都不显示；
 
 AC2: 
 GIVEN page without any data, 
 WHEN user types expense information and clicks add button, 
 THEN the page shows the newly added expense data.
+点击add按钮，输入，然后显示新增加的数据；
 
 AC3: 
 GIVEN page with some data, 
 WHEN user visits page, 
 THEN the page shows all expense data.
+如果有消费记录，显示消费记录；
 
 AC4: 
 GIVEN page with some data, 
 WHEN user types expense information and clicks add button, 
 THEN the page shows the newly added expense data on the top.
+新增的放在第一位；
 
 AC5: 
 GIVEN page with some data, 
 WHEN user clicks delete button next to expense, 
 THEN the page no longer shows the deleted expense.
+删除功能；
+
 
 ## Practice Requirement:
 - Git commit with baby steps
