@@ -10,7 +10,7 @@ import { ExpenseRecordService } from '../services/expense-record.service.mock';
 })
 export class ExpenseRecordComponent implements OnInit {
 
-  private expenseRecordItem: ExpenseRecordItem;
+  private expenseRecordItem!: ExpenseRecordItem;
 
   public searchString: string = '';
   // public displayList: Array<ExpenseRecordItem> = new Array<ExpenseRecordItem>;
