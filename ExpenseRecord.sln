@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpenseRecord", "ExpenseRecord\ExpenseRecord.csproj", "{181EB833-CE9E-4AEB-A490-1259B8B3C9AE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpenseRecordTest", "ExpenseRecordTest\ExpenseRecordTest.csproj", "{EF0ABFE2-F1FC-465A-9FF0-EDEAAD2BABB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpenseRecord.UnitTest", "ExpenseRecordTest\ExpenseRecord.UnitTest.csproj", "{EF0ABFE2-F1FC-465A-9FF0-EDEAAD2BABB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
