@@ -2,6 +2,7 @@
   <span>Expense Record</span>
 </div>
 <div class="list">
+  
   <ng-container *ngFor="let item of expenseRecordService.displayList ">
     <div (click)="deleteItem()" class="item">
       <span class="item-desc">{{item.description}}</span>

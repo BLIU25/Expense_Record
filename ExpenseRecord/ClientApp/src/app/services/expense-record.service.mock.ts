@@ -16,11 +16,11 @@ export class ExpenseRecordService {
   constructor(private httpClient: HttpClient) { }
 
   getAll(): Observable<ExpenseRecordItem[]> {
-    return this.httpClient.get<ExpenseRecordItem[]>(`http://localhost:5225/api/records/all`);     
+    return this.httpClient.get<ExpenseRecordItem[]>(`http://localhost:44425/api/records/all`);     
   }
 
   createOne(body: ExpenseRecordItem): Observable<ExpenseRecordItem> {
-    return this.httpClient.post<ExpenseRecordItem>(`http://localhost:5225/api/records`,body);
+    return this.httpClient.post<ExpenseRecordItem>(`http://localhost:44425/api/records`,body);
   }
 
   saveExpenseRecords(expenseRecords: ExpenseRecordItem[]) {
@@ -28,7 +28,7 @@ export class ExpenseRecordService {
   }
 
   deleteOne(id: string): Observable<String> {
-    return this.httpClient.delete<String>(`http://localhost:5225/api/records/${id}`);
+    return this.httpClient.delete<String>(`http://localhost:44425/api/records/${id}`);
   }
 
   private read(): ExpenseRecordItem[] {
