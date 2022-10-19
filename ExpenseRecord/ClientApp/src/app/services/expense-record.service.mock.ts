@@ -23,8 +23,8 @@ export class ExpenseRecordService {
     return this.httpClient.post<ExpenseRecordItem>(`http://localhost:5225/api/records`,body);
   }
 
-  saveToDoList(todolist: ExpenseRecordItem[]) {
-    this.expenseRecords = todolist;
+  saveExpenseRecords(expenseRecords: ExpenseRecordItem[]) {
+    this.expenseRecords = expenseRecords;
   }
 
   deleteOne(id: string): Observable<String> {
