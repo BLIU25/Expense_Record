@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ExpenseRecord.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/records")]
 public class ExpenseRecordController : ControllerBase
 {
     private readonly IExpenseRecordService _expenseRecordService;

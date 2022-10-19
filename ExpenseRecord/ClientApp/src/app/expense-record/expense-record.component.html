@@ -1,0 +1,19 @@
+<div class="title">
+  <span>Expense Record</span>
+</div>
+<div class="search">
+  <input (ngModelChange)="onSearchTextChange($event)" [ngModel]="searchString" placeholder="Search ...">
+  <button (click)="reload()" class="button-default">Reload</button>
+</div>
+<div class="list">
+  <ng-container *ngFor="let item of todoService.displayList ">
+    <div (click)="navToItem(item)" class="item">
+      <input (click)="$event.stopPropagation()" (ngModelChange)="toggleItemDone(item)" [ngModel]="item.done"
+             type="checkbox">
+      <span class="item-desc">{{item.description}}</span>
+    </div>
+  </ng-container>
+</div>
+<div class="create-item">
+  <button (click)="navToCreateNew()" class="button-blue">Create Item</button>
+</div>
