@@ -1,6 +1,6 @@
 <div class="header">
     <button (click)="backToRecordlist()" class="button-default">
-      <span>Back to ToDoList</span>
+      <span>Back to Record List</span>
     </button>
   </div>
 
@@ -12,12 +12,6 @@
   </form>
 
   <div class="footer">
-    <div class="delete-item">
-      <button *ngIf="expenseRecordItem?.id && !isNewItem()" (click)="deleteItem()" class="button-red">Delete Item</button>
-    </div>
-    <div>
-      <span *ngIf="expenseRecordItem.id && !isNewItem()">Created on {{expenseRecordItem.date | date}}</span>
-    </div>
     <div class="save-item">
         <button (click)="saveItem()" class="button-blue">Save Item</button>
     </div>
